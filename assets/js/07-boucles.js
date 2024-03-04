@@ -10,3 +10,20 @@
 // ***
 // ****
 // *****
+
+// let response = prompt('donne moi un nombre entre 1 et 10');
+
+// while (response < 1 || response > 10) {
+//     response = prompt('donne moi un nombre entre 1 et 10');
+// }
+let response;
+
+do {
+    response = prompt('donne moi un nombre entre 1 et 10');
+} while (response < 1 || response > 10);
+
+let stars = '';
+for (let i = 0; i < response; i++) {
+    stars = stars + '*';
+    console.log(stars);
+}
