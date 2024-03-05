@@ -30,10 +30,10 @@ animals.reverse();
 console.log(animals);
 
 // Modifier ou Ajouter ou Supprimer un élément dans un tableau
-// Ajouter un 'raton laveur' en deuxieme position
+// Ajouter
 animals.splice(1, 0, 'raton laveur');
 console.log(animals);
-// Modifier chien en aigle
+// Modifier
 animals.splice(6, 1, 'aigle');
 console.log(animals);
 // Supprimer

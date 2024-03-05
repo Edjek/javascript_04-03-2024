@@ -5,6 +5,7 @@
     On peut créer un tableau en utlisant des crochets [] et en y insérants les éléments séparés par des virgules
 */
 
+// Déclaration d'un tableau vide
 const tableau = [];
 
 const monthOfYear = [
@@ -37,5 +38,4 @@ function displayMonthOfYear() {
         console.log(monthOfYear[i]);
     }
 }
-
 displayMonthOfYear();
