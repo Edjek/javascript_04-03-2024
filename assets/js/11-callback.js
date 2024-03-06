@@ -21,8 +21,8 @@ function mathematique(x, y, callback) {
     return callback(x, y);
 }
 
-const res = mathematique(12, 89, function (a, t) {
-    return a * 5 + t * 9;
+const res = mathematique(12, 89, function (s, t) {
+    return s * 5 + t * 9;
 });
 console.log(res);
 

@@ -32,8 +32,8 @@ console.log(person.getIdentify());
 // Afficher la descritpion
 
 const car = {
-    model: 'audi',
     year: 2022,
+    model: 'audi',
     color: 'red',
     option: ['siege chauffant', 'vitre electrique'],
     motor: {
@@ -47,4 +47,10 @@ const car = {
 
 console.log(car.description());
 
-window.console.log()
+// On peut également acceder à une propriété d'un objet grace aux crochet et à sa clé en guise de valeur
+console.log(car['model']);
+
+// Pour pouvoir boucler sur un objet il faut utiliser for(...in..){} car les objets sont des énumérables
+for (let key in car) {
+    console.log(car[key]);
+}
