@@ -7,7 +7,8 @@
     qui peut être manipulé et modifié à travers le code Javascript
 */
 
-/*  -------------------------------------------
+/*
+    -------------------------------------------
     Methodes de selecteurs JavaScript
     -------------------------------------------
 */
@@ -15,6 +16,7 @@
 // ? La methode `getElementById()`
 const mainTitle = document.getElementById('main-title');
 mainTitle.style.fontFamily = 'Arial';
+mainTitle.style.fontSize = '50px';
 
 /*
     ? La methode `getElementsByTagName()`
@@ -34,6 +36,7 @@ for (let i = 0; i < paragraphes.length; i++) {
 const title = document.getElementsByClassName('title');
 for (let i = 0; i < title.length; i++) {
     title[i].style.backgroundColor = 'purple';
+    title[i].style.color = '#fff';
 }
 
 /*
