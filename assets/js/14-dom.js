@@ -33,14 +33,14 @@ for (let i = 0; i < paragraphes.length; i++) {
 */
 const title = document.getElementsByClassName('title');
 for (let i = 0; i < title.length; i++) {
-    title[i].style.backgroundColor = 'purple'
+    title[i].style.backgroundColor = 'purple';
 }
 
 /*
     ? La methode `querySelector()`
 */
-const cssProperties = document.querySelector('#title')
-cssProperties.style.fontSize = '30px'
+const cssProperties = document.querySelector('#title');
+cssProperties.style.fontSize = '30px';
 
 /*
     ? La methode `querySelectorAll()`
@@ -48,14 +48,14 @@ cssProperties.style.fontSize = '30px'
     sur laquelle on pourra itérer avec la boucle `for()`, for(...of..) et la méthode `forEach()`
 
 */
-const newParagraphes = document.querySelectorAll('p')
+const newParagraphes = document.querySelectorAll('p');
 // for( let paragraphe of newParagraphes){
 //     paragraphe.style.textDecoration = 'underline'
 // }
 
-newParagraphes.forEach(function(paragraphe){
-    paragraphe.style.textDecoration = 'underline'
-})
+newParagraphes.forEach(function (paragraphe) {
+    paragraphe.style.textDecoration = 'underline';
+});
 
 // selectionner tous les elements qui ont la class txt-uppercase
 // tous les mettree en majuscule
