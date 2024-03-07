@@ -16,6 +16,7 @@ listMovies.addEventListener('click', function (event) {
 listMovies.addEventListener('dblclick', function (e) {
     const title = document.createElement('h2');
     title.textContent = e.target.textContent;
+
     const container = document.querySelector('#container');
 
     container.prepend(title);
