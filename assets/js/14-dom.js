@@ -8,9 +8,9 @@
 */
 
 /*
-    -------------------------------------------
+    --------------------------------------------------
     Methodes de selecteurs JavaScript
-    -------------------------------------------
+    --------------------------------------------------
 */
 
 // ? La methode `getElementById()`
@@ -60,8 +60,11 @@ newParagraphes.forEach(function (paragraphe) {
     paragraphe.style.textDecoration = 'underline';
 });
 
-// selectionner tous les elements qui ont la class txt-uppercase
-// tous les mettre en majuscule
+/*
+    --------------------------------------------------
+    Practice
+    --------------------------------------------------
+*/
 
 const txtUppercases = document.querySelectorAll('.paragraphe-container p');
 
@@ -70,7 +73,9 @@ for (let txtUppercase of txtUppercases) {
 }
 
 /*
+    --------------------------------------------------
     Quelques propriétés liées aux éléments du DOM
+    --------------------------------------------------
 */
 
 // La propriété `style` permet de modifier le style
@@ -97,3 +102,22 @@ title2.textContent = "C'est <strong> passi dur </strong> le Js";
 const paragrapheWithTitle = document.querySelector('#paragraphe-with-title');
 paragrapheTest.setAttribute('title', 'Je suis encore une pop up');
 paragrapheWithTitle.title = 'Je suis aussi une pop-up';
+
+/*
+    -------------------------------------------
+                Créer des elements
+    -------------------------------------------
+*/
+
+// Créer un element en Js
+const newParagraphe = document.createElement('p')
+newParagraphe.classList.add('new-paragraphe')
+newParagraphe.textContent = 'Je suis un nouvel element créé en Js'
+
+const paragrapheContainer = document.querySelector('#paragraphe-container')
+
+// append() ajoute un element a la fin
+// paragrapheContainer.append(newParagraphe)
+
+// prepend() ajoute un element au debut
+paragrapheContainer.prepend(newParagraphe)
