@@ -4,13 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Javascript -DOM</title>
-        <script src="../assets/js/14-dom.js" defer></script>
+        <link rel="stylesheet" href="../assets/css/dom.css" />
+        <!-- <script src="../assets/js/14-dom.js" defer></script> -->
+        <script src="../assets/js/15-events.js" defer></script>
     </head>
     <body>
         <h1 id="main-title">La manipulation du DOM en Javascript</h1>
         <h2 class="title" id="title">Quelques propriétés CSS</h2>
-        <h2 class="title">Pas facile le Javascript</h2>
-        <div>
+        <h2 class="title txt-uppercase" id="title-2">
+            Pas facile le Javascript
+        </h2>
+        <div class="paragraphe-container">
+            <h2>Les paragraphes</h2>
             <p>
                 La méthode javascript getElementById() de l'objet Document
                 permet de sélectionner une balise ayant un attribut id (je
@@ -22,7 +27,7 @@
                 ou Element permet de sélectionner une balise par son nom
                 (tagName).
             </p>
-            <p id="" class="">
+            <p id="paragraphe-test" class="txt-uppercase">
                 La méthode Javascript getElementsByClassName() de l'objet
                 Document ou Element permet de sélectionner une balise par un
                 identifiant de class CSS contenu dans l'attribut HTML (class).
@@ -32,7 +37,7 @@
                 Element permet de sélectionner une balise grâce à un sélecteur
                 CSS.
             </p>
-            <p>
+            <p id="paragraphe-with-title">
                 La méthode Javascript querySelectorAll() de l'objet Document ou
                 Element permet de sélectionner une balise grâce à un sélecteur
                 CSS.

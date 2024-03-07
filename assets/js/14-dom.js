@@ -61,4 +61,39 @@ newParagraphes.forEach(function (paragraphe) {
 });
 
 // selectionner tous les elements qui ont la class txt-uppercase
-// tous les mettree en majuscule
+// tous les mettre en majuscule
+
+const txtUppercases = document.querySelectorAll('.paragraphe-container p');
+
+for (let txtUppercase of txtUppercases) {
+    txtUppercase.style.textTransform = 'uppercase';
+}
+
+/*
+    Quelques propriétés liées aux éléments du DOM
+*/
+
+// La propriété `style` permet de modifier le style
+mainTitle.style.textTransform = 'uppercase';
+
+// La méthode `classList.add()` permet d'ajouter une classe à un élément HTML.
+mainTitle.classList.add('txt-green', 'test');
+
+// La méthode `classList.remove()` permet d'ajouter une classe à un élément HTML.
+const paragrapheTest = document.querySelector('#paragraphe-test');
+paragrapheTest.classList.remove('txt-uppercase');
+
+// La méthode `classList.contains()` permet de vérifier si un élément HTML possède une classe donnée.
+const title2 = document.querySelector('#title-2');
+const isTitle = title2.classList.contains('chaussette');
+
+// La propriété `innerHTML` permet de récupérer ou de définir le contenu HTML d'un élément HTML (le HTML est interprété).
+title2.innerHTML = "C'est <em> pas si dur</em> le Js";
+
+// La propriété `textContent` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
+title2.textContent = "C'est <strong> passi dur </strong> le Js";
+
+// La méthode `setAttribute()` permet de définir la valeur d'un attribut HTML.
+const paragrapheWithTitle = document.querySelector('#paragraphe-with-title');
+paragrapheTest.setAttribute('title', 'Je suis encore une pop up');
+paragrapheWithTitle.title = 'Je suis aussi une pop-up';
