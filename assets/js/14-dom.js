@@ -17,6 +17,7 @@
 const mainTitle = document.getElementById('main-title');
 mainTitle.style.fontFamily = 'Arial';
 mainTitle.style.fontSize = '50px';
+mainTitle.style.margin = '30px';
 
 /*
     ? La methode `getElementsByTagName()`
@@ -35,15 +36,16 @@ for (let i = 0; i < paragraphes.length; i++) {
 */
 const title = document.getElementsByClassName('title');
 for (let i = 0; i < title.length; i++) {
-    title[i].style.backgroundColor = 'purple';
+    title[i].style.backgroundColor = 'pink';
     title[i].style.color = '#fff';
+    title[i].style.padding = '15px';
 }
 
 /*
     ? La methode `querySelector()`
 */
 const cssProperties = document.querySelector('#title');
-cssProperties.style.fontSize = '30px';
+cssProperties.style.fontSize = '40px';
 
 /*
     ? La methode `querySelectorAll()`
@@ -58,6 +60,7 @@ const newParagraphes = document.querySelectorAll('p');
 
 newParagraphes.forEach(function (paragraphe) {
     paragraphe.style.textDecoration = 'underline';
+    paragraphe.style.paddingBottom = '20px';
 });
 
 /*
@@ -69,7 +72,7 @@ newParagraphes.forEach(function (paragraphe) {
 const txtUppercases = document.querySelectorAll('.paragraphe-container p');
 
 for (let txtUppercase of txtUppercases) {
-    txtUppercase.style.textTransform = 'uppercase';
+    txtUppercase.style.fontStyle = 'italic';
 }
 
 /*
@@ -93,7 +96,7 @@ const title2 = document.querySelector('#title-2');
 const isTitle = title2.classList.contains('chaussette');
 
 // La propriété `innerHTML` permet de récupérer ou de définir le contenu HTML d'un élément HTML (le HTML est interprété).
-title2.innerHTML = "C'est <em> pas si dur</em> le Js";
+title2.innerHTML = "C'est <em>pas si dur</em> le Js";
 
 // La propriété `textContent` permet de récupérer ou de définir le contenu textuel d'un élément HTML.
 title2.textContent = "C'est <strong> passi dur </strong> le Js";
@@ -105,19 +108,18 @@ paragrapheWithTitle.title = 'Je suis aussi une pop-up';
 
 /*
     -------------------------------------------
-                Créer des elements
+    Créer des elements en Javascript
     -------------------------------------------
 */
 
-// Créer un element en Js
-const newParagraphe = document.createElement('p')
-newParagraphe.classList.add('new-paragraphe')
-newParagraphe.textContent = 'Je suis un nouvel element créé en Js'
+const newParagraphe = document.createElement('p');
+newParagraphe.classList.add('new-paragraphe');
+newParagraphe.textContent = 'Je suis un nouvel element créé en Js';
 
-const paragrapheContainer = document.querySelector('#paragraphe-container')
+const paragrapheContainer = document.querySelector('#paragraphe-container');
 
-// append() ajoute un element a la fin
+// `append()` ajoute un element à la fin
 // paragrapheContainer.append(newParagraphe)
 
-// prepend() ajoute un element au debut
-paragrapheContainer.prepend(newParagraphe)
+// `prepend()` ajoute un element au debut
+paragrapheContainer.prepend(newParagraphe);

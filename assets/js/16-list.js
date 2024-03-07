@@ -1,25 +1,22 @@
 const listMovies = document.querySelector('#list-movies');
+// listMovies.style.backgroundColor = 'red'
+// listMovies.style.padding = '30px'
 
 listMovies.addEventListener('click', function (event) {
     if (
         event.target.style.fontSize == '' ||
         event.target.style.fontSize == '16px'
     ) {
-        event.target.style.fontSize = '50px';
+        event.target.style.fontSize = '30px';
     } else {
         event.target.style.fontSize = '16px';
     }
 });
 
-listMovies.addEventListener('dblclick', function(e){
-    const title = document.createElement('h2')
-    title.textContent = e.target.textContent
-    const container = document.querySelector('#container')
- 
-    container.prepend(title)
+listMovies.addEventListener('dblclick', function (e) {
+    const title = document.createElement('h2');
+    title.textContent = e.target.textContent;
+    const container = document.querySelector('#container');
 
-})
-// Quand on double sur la liste
-    // On va creer un element h2
-    // Le texte de ce h2 sera le texte de l'element de la liste sur lequel on double cliqué
-    // On l'ajoute en haut (tout en haut avant le titre principale)
+    container.prepend(title);
+});
