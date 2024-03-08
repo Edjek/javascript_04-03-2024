@@ -1,6 +1,4 @@
 const listMovies = document.querySelector('#list-movies');
-// listMovies.style.backgroundColor = 'red'
-// listMovies.style.padding = '30px'
 
 listMovies.addEventListener('click', function (event) {
     if (
@@ -14,8 +12,14 @@ listMovies.addEventListener('click', function (event) {
 });
 
 listMovies.addEventListener('dblclick', function (e) {
+    const movieTitle = document.querySelector('#movie-title');
+    if (movieTitle) {
+        movieTitle.remove();
+    }
+
     const title = document.createElement('h2');
     title.textContent = e.target.textContent;
+    title.setAttribute('id', 'movie-title');
 
     const container = document.querySelector('#container');
 
