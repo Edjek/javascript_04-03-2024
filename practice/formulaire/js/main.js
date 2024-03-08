@@ -2,20 +2,21 @@ const submit = document.querySelector('#submit');
 const form = document.querySelector('#form-inscription');
 
 submit.addEventListener('click', function (e) {
-    // Prevent the form from being submitted
+    // Previent le comportement par défaut du bouton submit
     e.preventDefault();
 
-    // Remove all error messages
+    // On supprime les messages d'erreur
     removeErrorMessages();
 
-    // Check if inputs are valid
+    // On verifie si les inputs sont valides
+    // Si c'est le cas, on soumet le formulaire
     if (checkValidity()) {
-        // Submit the form
+        // On soumet le formulaire
         form.submit();
     }
 });
 
-// Remove all error messages
+// Fonction pour supprimer les messages d'erreur
 function removeErrorMessages() {
     const messageError = document.querySelectorAll('.message-error');
     messageError.forEach((message) => {
@@ -23,7 +24,8 @@ function removeErrorMessages() {
     });
 }
 
-// Function to display error message
+// Fonction pour afficher un message d'erreur
+// Puis ce qu'on fait plusieurs fois, on crée une fonction pour le faire une seule fois
 function displayErrorMessage(input, message) {
     const messageError = document.createElement('p');
     messageError.textContent = message;
@@ -31,19 +33,22 @@ function displayErrorMessage(input, message) {
     input.parentElement.append(messageError);
 }
 
-// Function to check if inputs are valid
+// Fonction pour vérifier la validité des inputs
 function checkValidity() {
-    // Get all inputs
+    // On récupère les inputs
     const nameInput = document.querySelector('#name');
     const emailInput = document.querySelector('#email');
     const pswdInput = document.querySelector('#pswd');
     const confirmPswdInput = document.querySelector('#confirm-pswd');
 
+    // On part du principe que le formulaire est valide
     let isValide = true;
 
     // Check if inputs are empty
     if (nameInput.value == '') {
         displayErrorMessage(nameInput, 'Veuillez indiquer votre nom et prénom');
+        // Si un champ est vide, le formulaire n'est pas valide
+        // On change la valeur de isValide à false
         isValide = false;
     } else if (emailInput.value == '') {
         displayErrorMessage(
@@ -67,5 +72,9 @@ function checkValidity() {
         );
         isValide = false;
     }
+    // On retourne la valeur de isValide
+    // Si isValide est true, le formulaire est valide
+    // Si isValide est rentré dans une des conditions, le formulaire n'est pas valide
+    // Et isValide est false
     return isValide;
 }
