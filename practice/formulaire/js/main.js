@@ -15,6 +15,22 @@ submit.addEventListener('click', function (e) {
     }
 });
 
+// Remove all error messages
+function removeErrorMessages() {
+    const messageError = document.querySelectorAll('.message-error');
+    messageError.forEach((message) => {
+        message.remove();
+    });
+}
+
+// Function to display error message
+function displayErrorMessage(input, message) {
+    const messageError = document.createElement('p');
+    messageError.textContent = message;
+    messageError.classList.add('message-error');
+    input.parentElement.append(messageError);
+}
+
 // Function to check if inputs are valid
 function checkValidity() {
     // Get all inputs
@@ -52,20 +68,4 @@ function checkValidity() {
         isValide = false;
     }
     return isValide;
-}
-
-// Function to display error message
-function displayErrorMessage(input, message) {
-    const messageError = document.createElement('p');
-    messageError.textContent = message;
-    messageError.classList.add('message-error');
-    input.parentElement.append(messageError);
-}
-
-// Remove all error messages
-function removeErrorMessages() {
-    const messageError = document.querySelectorAll('.message-error');
-    messageError.forEach((message) => {
-        message.remove();
-    });
 }
