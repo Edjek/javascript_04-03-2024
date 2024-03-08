@@ -9,12 +9,6 @@ function checkValidity() {
     const pswdInput = document.querySelector('#pswd');
     const confirmPswdInput = document.querySelector('#confirm-pswd');
 
-    // Remove all error messages
-    const messagesError = document.querySelectorAll('.message-error');
-    for (const messageError of messagesError) {
-        messageError.remove();
-    }
-
     let isValide = true;
 
     // Check if inputs are empty
@@ -55,10 +49,19 @@ function displayErrorMessage(input, message) {
     input.parentElement.append(messageError);
 }
 
+// Remove all error messages
+function removeErrorMessage() {
+    const messageError = document.querySelectorAll('.message-error');
+    messageError.forEach((message) => {
+        message.remove();
+    });
+}
+
 submit.addEventListener('click', function (e) {
     e.preventDefault();
+    removeErrorMessage();
 
     if (checkValidity()) {
-        form.submit()
+        form.submit();
     }
 });
