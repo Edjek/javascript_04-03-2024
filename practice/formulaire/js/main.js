@@ -1,6 +1,19 @@
 const submit = document.querySelector('#submit');
 const form = document.querySelector('#form-inscription');
-console.log(form);
+
+submit.addEventListener('click', function (e) {
+    // Prevent the form from being submitted
+    e.preventDefault();
+
+    // Remove all error messages
+    removeErrorMessages();
+
+    // Check if inputs are valid
+    if (checkValidity()) {
+        // Submit the form
+        form.submit();
+    }
+});
 
 function checkValidity() {
     // Get all inputs
@@ -50,18 +63,9 @@ function displayErrorMessage(input, message) {
 }
 
 // Remove all error messages
-function removeErrorMessage() {
+function removeErrorMessages() {
     const messageError = document.querySelectorAll('.message-error');
     messageError.forEach((message) => {
         message.remove();
     });
 }
-
-submit.addEventListener('click', function (e) {
-    e.preventDefault();
-    removeErrorMessage();
-
-    if (checkValidity()) {
-        form.submit();
-    }
-});
