@@ -15,5 +15,5 @@ todoList.addEventListener('click', function (e) {
 });
 
 todoList.addEventListener('dblclick', function (e) {
-    e.target.removew();
+    e.target.remove();
 });
