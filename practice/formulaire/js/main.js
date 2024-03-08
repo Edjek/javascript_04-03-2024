@@ -15,6 +15,7 @@ submit.addEventListener('click', function (e) {
     }
 });
 
+// Function to check if inputs are valid
 function checkValidity() {
     // Get all inputs
     const nameInput = document.querySelector('#name');
@@ -36,7 +37,6 @@ function checkValidity() {
         isValide = false;
     } else if (pswdInput.value == '') {
         displayErrorMessage(pswdInput, 'Veuillez choisir un mot de passe');
-
         isValide = false;
     } else if (confirmPswdInput.value == '') {
         displayErrorMessage(
