@@ -1,8 +1,7 @@
-const submit = document.querySelector('#submit');
 const form = document.querySelector('#form-inscription');
 
-submit.addEventListener('click', function (e) {
-    // Previent le comportement par défaut du bouton submit
+form.addEventListener('click', function (e) {
+    // Previent le comportement par défaut du formulaire
     e.preventDefault();
 
     // On supprime les messages d'erreur
